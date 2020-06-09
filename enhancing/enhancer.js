@@ -29,5 +29,5 @@ function repair(item) {
 }
 
 function get(item) {
-  return { ...item };
+  return {...item, name: `[+${item.enhancement}] ${item.name}`}
 }

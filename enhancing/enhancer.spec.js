@@ -20,4 +20,7 @@ describe("text enhancer methods", ()=>{
     it('enhancement level bigger then 18 will decrease enhancement level by 1', ()=>{
         expect(enhancer.fail({name:'Demon Shield',enhancement:18,durability:15})).toStrictEqual({name:'Demon Shield',enhancement:17,durability:15})
     })
+    it('item with the level of enhancement preceded', ()=>{
+        expect(enhancer.get({name:'Fire Ring', enhancement: 11, durability: 10})).toStrictEqual({name:'[+11] Fire Ring',enhancement: 11, durability:10})
+    })
 });
